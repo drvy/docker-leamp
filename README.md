@@ -1,7 +1,7 @@
 # Docker Compose LEMP stack
 
 Simple `docker-compose.yml` that builds a LEMP stack. Intended for development
-purpouses only. I also have a Vagrant Box for development purpouses, [check it out
+purposes only. I also have a Vagrant Box for development purposes, [check it out
 here](https://github.com/drvy/drvys-box).
 
 
