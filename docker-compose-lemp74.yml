@@ -3,7 +3,7 @@ version: '3.7'
 services:
   nginx:
     image: nginx:latest
-    container_name: LEMP_nginx
+    container_name: LEAMP_nginx
     restart: always
     volumes:
       - './log/nginx/:/var/log/nginx/'
@@ -20,10 +20,10 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: LEMP_phpmyadmin
+    container_name: LEAMP_phpmyadmin
     restart: always
     environment:
-      PMA_HOST: LEMP_mysql
+      PMA_HOST: LEAMP_mysql
     links:
       - database
     ports:
@@ -31,7 +31,7 @@ services:
 
   database:
     image: mysql:5.7
-    container_name: LEMP_mysql
+    container_name: LEAMP_mysql
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
       MYSQL_ROOT_PASSWORD: 'toor'
@@ -42,8 +42,8 @@ services:
       - 9193:3306
 
   php:
-    build: ./docker/php
-    container_name: LEMP_php
+    build: ./docker/lemp74
+    container_name: LEAMP_php
     restart: always
     environment:
       XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9000 remote_enable=0
