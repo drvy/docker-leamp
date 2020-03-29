@@ -22,7 +22,7 @@ here](https://github.com/drvy/drvys-box).
 
 ### Ports
 
-- __NGINX__ is exposed to `80` (80 in it's container).
+- __NGINX__ and __APACHE__ are exposed to `80` (80 in their container).
 - __PHPMyAdmin__ is exposed to `9192` (80 in it's container).
 - __MySQL__ is exposed to `9193` (3306 in it's container).
 - __PHPFPM__ is exposed to `9194` (9000 in it's container).
