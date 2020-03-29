@@ -6,10 +6,11 @@ here](https://github.com/drvy/drvys-box).
 
 ## Services
 
-- Apache
+- Apache with PHP 7.4 (`php:7.4-apache`)
 - PHPMyAdmin (`phpmyadmin/phpmyadmin`)
 - MySQL 5.7 (`mysql:5.7`)
-- PHP Extensions: `xdebug`, `zip`, `gd`, `mysqli`, `curl`
+- PHP Extensions: `xdebug`, `zip`, `gd`, `mysqli`, `curl`, `pdo_mysql`
+- Apache enabled mods: `mod_rewrite`
 
 ## Install
 
