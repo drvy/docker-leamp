@@ -25,7 +25,7 @@ Services depend on the compose file chosen. In all cases, PHPMyAdmin and MySQL w
 You must indicate to `docker-compose` the compose file you want to manage at all
 times. For example, to build and run a LEMP 7.4 Stack:
 
-1. Clone ( `git clone https://github.com/drvy/docker-lemp.git` )
+1. Clone ( `git clone https://github.com/drvy/docker-leamp` )
 2. Build ( `docker-compose -f lemp74.yml build --no-cache` )
 3. Run   ( `docker-compose -f lemp74.yml up -d` )
 4. Use   ( `http://localhost` )
