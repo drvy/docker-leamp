@@ -3,10 +3,10 @@ version: '3.7'
 services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: LAMP74_phpmyadmin
+    container_name: LEAMP74_phpmyadmin
     restart: always
     environment:
-      PMA_HOST: LAMP74_mysql
+      PMA_HOST: LEAMP74_mysql
     links:
       - database
     ports:
@@ -14,7 +14,7 @@ services:
 
   database:
     image: mysql:5.7
-    container_name: LAMP74_mysql
+    container_name: LEAMP74_mysql
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
       MYSQL_ROOT_PASSWORD: 'toor'
@@ -25,14 +25,14 @@ services:
       - 9193:3306
 
   php:
-    build: ./docker/php
-    container_name: LAMP74_php
+    build: ./docker/lamp74
+    container_name: LEAMP74_php
     restart: always
     environment:
       XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9000 remote_enable=0
     volumes:
       - './src:/var/www/html'
-      - './log/nginx/:/var/log/apache2/'
+      - './log/apache2/:/var/log/apache2/'
     links:
       - database
     ports:
